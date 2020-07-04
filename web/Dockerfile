@@ -4,6 +4,7 @@ ENV PYTHONUNBUFFERED 1
 
 COPY ./requirements.txt requirements.txt
 COPY ./app /app
+COPY ./entrypoint.sh /entrypoint.sh
 
 # install psycopg2
 RUN apt-get update && apt-get install -qq -y \
@@ -16,3 +17,5 @@ WORKDIR /app
 RUN adduser --disabled-password --gecos '' user
 
 USER user
+
+ENTRYPOINT [ "sh", "/entrypoint.sh" ]
