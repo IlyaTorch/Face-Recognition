@@ -5,6 +5,10 @@ ENV PYTHONUNBUFFERED 1
 COPY ./requirements.txt requirements.txt
 COPY ./app /app
 
+# install psycopg2
+RUN apt-get update && apt-get install -qq -y \
+  build-essential libpq-dev netcat --no-install-recommends
+
 RUN pip install -r requirements.txt
 
 WORKDIR /app
