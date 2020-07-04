@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'face',
 ]
 
 MIDDLEWARE = [
@@ -83,7 +84,6 @@ DATABASES = {
         'PORT': os.getenv('SQL_PORT', '5432'),
     }
 }
-
 
 
 # Password validation

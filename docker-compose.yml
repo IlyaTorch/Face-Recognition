@@ -9,5 +9,8 @@ services:
         command: python manage.py runserver 0.0.0.0:8000
         depends_on: 
             - db
+        env_file: .env
     db:
         image: postgres:10-alpine
+        environment:
+            POSTGRES_PASSWORD: 1234
