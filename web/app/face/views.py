@@ -10,5 +10,5 @@ def index(request):
 
     image_urls = Url.objects.all()
 
-    context = {'data': image_urls}
+    context = {'image_urls': image_urls}
     return render(request, 'face/index.html', context=context)
