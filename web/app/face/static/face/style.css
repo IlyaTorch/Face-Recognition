@@ -3,6 +3,11 @@
     margin: 0;
 }
 
+input::placeholder {
+    font-size: 20px;
+    padding: 10px;
+}
+
 .wrapper {
     display: grid;
     margin: 20px 40px
@@ -34,7 +39,11 @@ img {
     top:1%;
     color: white;
     background-color: red;
-    padding: 0.3rem;
+    padding: 0.5rem;
+    font-size: 20px;
+    opacity: 0.9;
+    text-decoration: none;
+
 }
 
 
@@ -50,7 +59,7 @@ img {
 @media (min-width: 700px) {
     .galery {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 15px;
     }
   }
