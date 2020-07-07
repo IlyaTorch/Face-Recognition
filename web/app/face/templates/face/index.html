@@ -22,12 +22,10 @@
             {% for image_url in image_urls %}
                 <div class="image-container">
                 <img src="{{ image_url.image_url }}">
-                <div class="bounding-box" style="top: 40%; right: 40%; bottom: 40%; left: 40%;"></div>
-
                 {% for bb in image_url.boundingbox_set.all %}
-                    <div class="bounding-box" style="top: 40%; right: 40%; bottom: 40%; left: 40%;"></div>
-               
+                    <div class="bounding-box" style="top: {{ bb.top }}%; right: {{ bb.right }}%; bottom: {{ bb.bottom }}%; left: {{ bb.left }}%;"></div>
                 {% endfor %}
+                
              {#   <a href="{% url 'delete' image_url.id %}" class="btn-delete">delete</a> #}
             </div>
                
