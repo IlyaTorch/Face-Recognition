@@ -1,6 +1,7 @@
 # Face Recognition app
 Face recognition app using OpenCV, Docker, Django, PostgreSql, Nginx
-Run app right now [here](ec2-18-224-4-40.us-east-2.compute.amazonaws.com:80/face)
+
+Run app right now [here](http://ec2-18-224-4-40.us-east-2.compute.amazonaws.com:80/face/)
 
 Run app locally:
 
