@@ -14,9 +14,10 @@ services:
       - DEBUG=0
   db:
     image: postgres:10-alpine
+    environment:
+      POSTGRES_PASSWORD: 1234
     volumes:
       - postgres_data:/var/lib/postgresql/data/
-
   nginx:
     build: ./nginx
     volumes:

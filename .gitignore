@@ -103,3 +103,4 @@ venv.bak/
 .mypy_cache/
 migrations/
 __pycache__/
+*pem
