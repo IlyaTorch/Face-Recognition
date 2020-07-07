@@ -30,10 +30,15 @@ def index(request):
                                                       image=url)
             bounding_box.save()
             
-
         return redirect('/face')
 
     image_urls = Url.objects.all()
 
     context = {'image_urls': image_urls}
     return render(request, 'face/index.html', context=context)
+
+
+def delete(request, url_id):
+    item = Url.objects.get(pk=url_id)
+    item.delete()
+    return redirect('/face')
